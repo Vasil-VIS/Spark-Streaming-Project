@@ -1,4 +1,4 @@
-# Spark-Streaming-Project
+# Spark Streaming Project
 Spark processing of streaming data using count-min sketches
 
 ## Stream Generator
