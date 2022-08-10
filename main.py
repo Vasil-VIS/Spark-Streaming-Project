@@ -120,7 +120,6 @@ def print_results(rdd):
 def run(ssc: StreamingContext, primes: list):
     # Obtain incoming entries from stream
     lines = ssc.socketTextStream('localhost', 9000)
-    #lines = ssc.socketTextStream('stream-host', 9000)
 
     # Count the number of updates
     updates = lines.count()
