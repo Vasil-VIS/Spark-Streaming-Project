@@ -28,6 +28,6 @@ The Spark code should print at regular intervals (every 2 seconds):
 - the time, in seconds since the start of the program
 
 ## Solution
-Similarity could be measured using the dot product. As the computation of the exact value of the similarity needs extensive space and computation, Count-Min Sketches could be used to summarize the vectors in sub-linear space. CM sketches use hash functions to map events to frequencies. It is a matrix with size $d_x w$, where $w=⌈e/ε⌉$, $d = ⌈ln(1/δ)⌉$. The similarity can be calculated using the following formulas:
+Similarity could be measured using the dot product. As the computation of the exact value of the similarity needs extensive space and computation, Count-Min Sketches could be used to summarize the vectors in sub-linear space. A CM sketch is a matrix with size $d_x w$, where $w=⌈e/ε⌉$, $d = ⌈ln(1/δ)⌉$. CM sketches use hash functions to map events to frequencies.Thus, each server can have a CM sketch, in which incoming IPs will be hashed.  The similarity can be calculated using the following formulas:
  - $(sk_A * sk_B)_{j} = \sum_{k=1}^{w} sk_{A}[k, j] * sk_{B}[k, j]$
  - $(sk_A * sk_B)=min_{j}(sk_A * sk_B)_j$
